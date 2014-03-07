@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es" id="swipe">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" href="css/programacion.css"/>
+		<link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/mmenu.css">
+    	
+		<script src="js/jquery_1.7.2.js"></script>
+        <script src="js/jquery.mobile-menu.js"></script>
+    	<script src="js/menu.js"></script>
+        
+  		<script src="cordova.js"></script>        
+        <!--<script type="text/javascript" src="js/jquery.js"></script>!-->
+    	<script src="js/programacion.js"></script>
+        <script src="js/alarma.js"></script>
+        <script src="js/fastclick.js"></script>
+        <script src="js/hammer.js"></script>
+        
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <script>
+			// Espere a que PhoneGap inicie
+    			document.addEventListener("deviceready", onDeviceReady, false);
+
+			// PhoneGap esta listo
+			function onDeviceReady() {
+				FastClick.attach(document.body);
+				setInterval('buscarAlarmas();',40000);
+				inicio();
+				
+			}			
+
+			  $(function(){
+			$("body").mobile_menu({
+			  menu: ['#main-nav ul', '#secondary-nav ul'],
+			  menu_width: 240,
+			  prepend_button_to: '#mobile-bar'
+			});
+		  });
+		  
+		  function limpiarMemoriaVisual(){
+			  window.localStorage.clear();
+		  }
+
+		</script>
+
+		
+    	
+		<title>Canal 13</title>
+        <SCRIPT LANGUAGE="JavaScript">
+			function mi_alerta () {
+				navigator.notification.alert(
+						'Canal 13 Version 1.0',  // message
+						'Canal 13',            // title
+						'Canal 13'                  // buttonName
+				);
+			}
+			
+			function Salir(){
+				if(navigator.app){
+					navigator.app.exitApp();
+				}else if(navigator.device){
+					navigator.device.exitApp();
+				}
+			}
+</SCRIPT>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+			<div id="header">
+				<nav id="mobile-bar"></nav>
+				<div id="home"><a href="index.html"><img src="img/home.png"></a></div>
+          <a href="index.html"><div id="logo"><img src="img/logo.png"></div></a>
+			
+			<nav id="main-nav">
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+            		<li><a href='https://www.facebook.com/CanalTR3CE'>Siguenos En Facebook</a></li>
+                    <li><a href='https://twitter.com/CanalTR3CE'>Siguenos En Twitter</a></li>
+                    <li><a onClick="mi_alerta()">Version</a></li>
+				</ul>
+			</nav>			 
+         
+        </div>
+
+			</header>
+
+		<section id="opciones">
+			<h1>Programación</h1>
+			<div id="seleccion">
+				 <div class="bloque" id="1" onClick="recargar.call(this);"><li class="menu lunes">l<div id="div1"></div></li></div>
+                               <div id="2" class="bloque" onClick="recargar.call(this);"><li class="menu martes" >m<div id="div2" ></div></li></div>
+                               <div id="3" class="bloque" onClick="recargar.call(this);"><li class="menu miercoles">m<div id="div3"></div></li></div>
+                               <div id="4" class="bloque" onClick="recargar.call(this);"><li class="menu jueves" >j<div id="div4"></div></li></div>
+                               <div id="5" class="bloque" onClick="recargar.call(this);"><li class="menu viernes">v<div id="div5"></div></li></div>
+                               <div  id="6"class="bloque" onClick="recargar.call(this);"><li class="menu sabado" >s<div id="div6"></div></li></div>
+                               <div  id="0" class="bloque" onClick="recargar.call(this);"><li class="menu domingo">d<div id="div0"></div></li></div>
+			</div>
+		</section>
+        
+		<section id="programas">						
+		</section>
+		</div>
+         <div id="entradaJson" style="display:none; background:#F00;height:60px;" onClick="buscarAlarmasDelDia();"></div>
+         <div id="limpieza" style="display:none; background:#00C;height:60px;" onClick="limpiarMemoriaVisual();"></div>
+         
+         	<script>
+					$(function(){  
+						    var gesto = document.getElementById("swipe");
+						        Hammer(gesto).on("swipeleft", function() {
+						        window.location="frecuencias.html";
+						       
+						    });
+						    
+						    Hammer(gesto).on("swiperight", function() {
+						       	window.location="envivo.html";
+						    });
+						    
+
+					});
+
+			</script>
+	</body>
+</html>

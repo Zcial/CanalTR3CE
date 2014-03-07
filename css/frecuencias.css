@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../fonts/HelveticaNeueLight.ttf') format('truetype');
+}
+body{
+	background: url("../img/patron.jpg");
+	font-family:'HelveticaNeueLight',Helvetica, Arial, sans-serif;
+}
+h1{
+	text-align: center;
+	padding: 10px;
+	color: white;
+	font-weight: normal;
+	font-family:'HelveticaNeueLight',Helvetica, Arial, sans-serif;;
+}
+a{
+	color: white;
+}
+a:visited{
+	color: white;
+}
+#wrapper{
+    background: url("../img/patron.jpg");
+}
+#busqueda{
+	background: #272626;
+	width: 100%;
+	padding: 20px 0px;
+}
+#caja{
+	color: #5f5e5e;
+	height: 40px;
+	width: 70%;
+	background: #4e4d4d;
+	margin: 0 auto;
+	position: relative;
+	line-height: 40px;
+	padding: 0px 5px;
+	font-family:'HelveticaNeueLight',Helvetica, Arial, sans-serif;
+}
+#dropmenu{
+	background: #4e4d4d;
+	margin: 0 auto;
+	width: 70%;
+	padding: 0px 5px;
+	display: none;
+	-webkit-transition: all 1s linear;
+	transition: all 1s linear;
+}
+#frecuencias{
+	margin-top: 10px;
+	padding: 10px;
+}
+#icon{
+	width: 40px;
+	height: 40px;
+	float: right;
+}
+#ocultar{
+	display: none;
+	width: 100%;
+	height: 80px;
+	background: rgba(0,0,0,0.5);
+	z-index: 900;
+	position: absolute;
+	top: 100px;
+}
+#ocultar>img{
+	width: 30px;
+	height: 30px;
+	margin-top: 25px;
+	margin-left: 48%;
+}
+.block{
+	display: block;
+	margin-bottom: 10px;
+}
+.canal{
+	font-family:'HelveticaNeueLight',Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	color: white;
+	background: #ea8800;
+	display: inline-block;
+	vertical-align: top;
+	height: 60px;
+	width: 60px;
+	border-radius: 30px;
+	line-height: 60px;
+	text-align: center;
+}
+.operador{
+	font-family:'HelveticaNeueLight',Helvetica, Arial, sans-serif;
+	display: inline-block;
+	vertical-align: top;
+	text-transform: uppercase;
+	height: 60px;
+	line-height: 60px;
+	width: 60%;
+	color: white;
+	margin-left: 5%;
+}
+
+/* --------------------------------------- */
+ul#primary-nav,
+ul#primary-nav ul {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%; /* Width of Menu Items */
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	background: #fff;; /* IE6 Bug */
+	font-size: 100%;
+	font-weight: bold;	
+}
+
+ul#primary-nav li {
+	position: relative;
+	list-style: none;
+	text-align: center;
+	}
+
+ul#primary-nav li a {
+	display: block;
+	text-decoration: none;
+	padding: 5px;
+	text-align: center;
+	border-bottom: 0;
+	color: #5f5e5e;
+	font-family:'HelveticaNeueLight',Helvetica, Arial, sans-serif;
+	}
+
+/* Fix IE. Hide from IE Mac \*/
+* html ul#primary-nav li { float: left; height: 1%; }
+* html ul#primary-nav li a { height: 1%; }
+/* End */
+
+ul#primary-nav ul {
+	display: none;
+	top: 0;
+	margin: 0 auto;
+	}
+
+ul#primary-nav li ul li a { padding: 2px 5px; } /* Sub Menu Styles */
+
+
+ul#primary-nav li.menuparent:hover,
+ul#primary-nav li.over { background-color: #f9f9f9; }
+
+ul#primary-nav li a:hover { color: #E2144A; }
+.feedEkList {
+	width: 100%;
+	list-style: none outside none;
+	background-color: #FFFFFF;
+	border: 1px solid #D3CAD7;
+	padding: 4px 0px;
+	color: #3E3E3E;
+	font-weight:normal !important;
+	margin:0 0 25px 0;
+}
+
+.feedEkList a{
+	color: #2489ce;
+}
+
+.feedEkList li {
+	border-bottom: 1px solid #D3CAD7;
+	padding: 15px;
+	margin-left: 5px !important;
+	background: url(../img/icon_movies.png) no-repeat;
+}
+.feedEkList li div{
+	font-size: 12px;
+	margin-left: 50px !important;
+}
+.feedEkList li:last-child {
+	border-bottom: none;
+}
+.itemTitle a, .itemTitle a:visited {
+	font-weight: bold;
+	color: #2489ce;
+	font-size: 14px; !important;
+	text-decoration: none
+}
+.itemTitle a:hover {
+	text-decoration: underline
+}
+.itemDate {
+	font-size: 12px !important;
+	color: #999999;
+}
+
+
+/* Android de 320 PX  */
+@media (max-width: 390px) {
+.feedEkList li {
+	font-size: 13px;
+}
+.itemDate {
+	font-size: 17px;
+}
+}
