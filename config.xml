@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.example"
+        versionCode = "10" 
+        version     = "1.0.0" >
+	
+	<name>Canal 13</name>
+	
+	<description>
+		Aplicación para ver los contenidos del Canal 13
+	</description>
+	
+	<author href="" email="apps.canal13@gmail.com">
+		Canal Regional- Teveandina
+	</author>
+
+	<preference name="load-url-timeout" value="60000" />
+		
+	
+	<!--permito que la apliación se ejecute en segundo plano!-->
+	<preference name="KeepRunning" value="false"/>
+	
+	<plugin name="Notification" value="org.apache.cordova.Notification"/>
+	<plugin name="Notification" value="CDVNotification" />
+	
+	
+	
+	<!--permite las notificaciones del sistemas!-->
+	<feature name="Notification">
+		<param name="android-package" value="org.apache.cordova.Notification" />
+	</feature>
+	<feature name="Notification">
+		<param name="ios-package" value="CDVNotification" />
+	</feature>
+	<feature name="http://api.phonegap.com/1.0/notification"/>
+	<feature name="Notification">
+		<param name="wp-package" value="Notification"/>
+	</feature>
+	
+	<!--Configuro permisos para el almacenamiento!-->
+	<icon src="icon.png" />
+	<icon src="icons/ios/icon57x57.png" gap:platform="ios" width="57" height="57" />
+	<icon src="icons/ios/icon72x72.png" gap:platform="ios" width="72" height="72" />
+	<icon src="icons/ios/icon114x114.png" gap:platform="ios" width="114" height="114" />
+	
+	<gap:splash src="img/splash.png" />
+	<gap:splash src="img/splash.png" gap:platform="ios" width="320" height="480" />
+
+	<!--Carga del servidor iOS!-->
+	
+	<access origin="*" />
+	<log level="DEBUG"/>
+	
+	
+	
+	<!--Carga del servidor Android 
+	<access uri="http://freddymanrique.com/" subdomains="true" />
+	
+
+	<access origin="http://freddymanrique.com/" subdomains="true"/>
+	<log level="DEBUG"/>
+	!-->
+	
+	</widget>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es" id="swipe">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" href="css/frecuencias.css"/>
+		<link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/mmenu.css">
+    	
+
+  		<script src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery_1.7.2.js"></script>
+        <script src="js/jquery.mobile-menu.js"></script>
+    	<script src="js/menu.js"></script>
+        <script src="js/drop.js"></script>
+        <script src="js/alarma.js"></script>
+		<script src="js/fastclick.js"></script>
+        <script src="js/hammer.js"></script>
+        <script>
+		
+			
+			// Espere a que PhoneGap inicie
+    			document.addEventListener("deviceready", onDeviceReady, false);
+
+			// PhoneGap esta listo
+			function onDeviceReady() {
+				FastClick.attach(document.body);
+				setInterval('buscarAlarmas();',40000);
+				inicio();			
+
+			}
+			
+			
+			
+				$(function(){
+			$("body").mobile_menu({
+			  menu: ['#main-nav ul', '#secondary-nav ul'],
+			  menu_width: 240,
+			  prepend_button_to: '#mobile-bar'
+			});
+		  });
+
+		</script>
+         <script>
+			function version () {
+				navigator.notification.alert(
+						'Canal 13 Version 1.0',  // message
+						'Canal 13',            // title
+						'Canal 13'                  // buttonName
+				);
+			}
+			function Salir(){
+			if(navigator.app){
+				navigator.app.exitApp();
+			}else if(navigator.device){
+				navigator.device.exitApp();
+			}
+		}
+		</script>
+        
+		
+		<title>Canal 13</title>
+	</head>
+	<body>
+  <div id="wrapper">
+      <header>
+        <div id="header">
+        <nav id="mobile-bar"></nav>
+        <div id="home"><a href="index.html"><img src="img/home.png"></a></div>
+          <a href="index.html"><div id="logo"><img src="img/logo.png"></div></a>
+      
+      <nav id="main-nav">
+        <ul>
+          	<li><a href="index.html">Inicio</a></li>
+            <li><a href='https://www.facebook.com/CanalTR3CE'>Siguenos En Facebook</a></li>
+            <li><a href='https://twitter.com/CanalTR3CE'>Siguenos En Twitter</a></li>
+            <li><a href="#" onClick="version(); return false;">Version</a></li>
+        </ul>
+      </nav>       
+         
+        </div>
+
+      </header>
+    <section>
+    	<h1>CONTENIDOS DIGITALES</h1>
+      <div id="cargador">
+      </div>
+      
+      <!--<div id="dropmenu">
+      
+           <ul id="primary-nav">             
+           </ul>
+      </div>!-->
+	</section>
+    
+  <section id="frecuencias">
+    <ul class="feedEkList">
+      <li><div class="itemDate">1 de enero de 2014, 1:23  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=vQj6Ltch_KA" target="_blank">  MI VIDA AL EXTREMO22   PARACAIDISMO parte1  </a></div></li>
+      <li><div class="itemDate">1 de enero de 2014, 2:54  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=NKmiEx01kL8" target="_blank">  MI VIDA AL EXTREMO22   PARACAIDISMO parte2  </a></div></li>
+      <li><div class="itemDate">1 de enero de 2014, 4:06  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=EbmQ2cx6Hqk" target="_blank">  MI VIDA AL EXTREMO22   PARACAIDISMO parte3  </a></div></li>
+      <li><div class="itemDate">1 de enero de 2014, 5:14  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=rq7H-ZFfFs0" target="_blank">  MI VIDA AL EXTREMO23   BUGGY ROLLIN parte1  </a></div></li>
+      <li><div class="itemDate">1 de enero de 2014, 6:23  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=zajrladCzNY" target="_blank">  MI VIDA AL EXTREMO23   BUGGY ROLLIN parte2  </a></div></li>
+      <li><div class="itemDate">1 de enero de 2014, 7:48  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=5MCGitgdYdo" target="_blank">  MI VIDA AL EXTREMO23   BUGGY ROLLIN parte3  </a></div></li>
+      <li><div class="itemDate">1 de enero de 2014, 8:24  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=htTl4HebvOw" target="_blank">  UNA HISTORIA EN BICICLETA CAPITULO 13 - parte 1 </a></div></li>
+      <li><div class="itemDate">1 de enero de 2014, 10:27 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=si9cxhy1bFg" target="_blank">  UNA HISTORIA EN BICICLETA CAPITULO 13 - parte 2 </a></div></li>
+      <li><div class="itemDate">1 de enero de 2014, 12:26 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=di651-VqDE0" target="_blank">  UNA HISTORIA EN BICICLETA CAPITULO 13 - parte 3 </a></div></li>
+      <li><div class="itemDate">7 de enero de 2014, 11:44 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=Y6zkOxIZRvE" target="_blank">  CASALE AL AIRE - Maria Isabel Urrutia, parte 3  </a></div></li>
+      <li><div class="itemDate">7 de enero de 2014, 13:57 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=N9NLpJAMBc8" target="_blank">  CASALE AL AIRE - Maria Isabel Urrutia, parte 4  </a></div></li>
+      <li><div class="itemDate">7 de enero de 2014, 16:36 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=JpiAjuzjTWY" target="_blank">  CASALE AL AIRE - Maria Isabel Urrutia, parte 5  </a></div></li>
+      <li><div class="itemDate">20 de enero de 2014, 9:08 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=nXq2Wc3MCnE" target="_blank">  UNA HISTORIA EN BICICLETA CAPITULO 14 - parte 1 </a></div></li>
+      <li><div class="itemDate">20 de enero de 2014, 11:02  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=EvnVVst_Puo" target="_blank">  UNA HISTORIA EN BICICLETA CAPITULO 14 - parte 2 </a></div></li>
+      <li><div class="itemDate">20 de enero de 2014, 12:38  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=w8TsG7DoxGY" target="_blank">  UNA HISTORIA EN BICICLETA CAPITULO 14 - parte 3 </a></div></li>
+      <li><div class="itemDate">20 de enero de 2014, 13:30  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=xhg2yWarnk8" target="_blank">  UNA HISTORIA EN BICICLETA CAPITULO 15 - parte 1 </a></div></li>
+      <li><div class="itemDate">20 de enero de 2014, 14:56  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=dLa8rlg15-s" target="_blank">  UNA HISTORIA EN BICICLETA CAPITULO 15 - parte 2 </a></div></li>
+      <li><div class="itemDate">20 de enero de 2014, 16:09  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=SWXKS6yFZPg" target="_blank">  UNA HISTORIA EN BICICLETA CAPITULO 15 - parte 3 </a></div></li>
+      <li><div class="itemDate">25 de enero de 2014, 18:08  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=_U21YyLS4m8" target="_blank">  Vota por el TR3CE en los TVyNovelas </a></div></li>
+      <li><div class="itemDate">28 de enero de 2014, 17:25  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=NPJ1hB-HhQk" target="_blank">  Isa te invita que votes por ella en los TVyNovelas  </a></div></li>
+      <li><div class="itemDate">30 de enero de 2014, 13:47  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=3C53el7OoE4" target="_blank">  Vota por Laura Beracasa en los Tv y Novelas </a></div></li>
+      <li><div class="itemDate">30 de enero de 2014, 15:09  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=s97-gHi-oww" target="_blank">  Vota por Alejandro Canedo en los TVyNovelas </a></div></li>
+      <li><div class="itemDate">30 de enero de 2014, 15:57  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=lB6MT59pg0U" target="_blank">  THE ROLLING STONES LLEGARON A MUSITRAMAS! </a></div></li>
+      <li><div class="itemDate">30 de enero de 2014, 16:36  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=g7hLbPXoWoQ" target="_blank">  Fans de Mario Espitia en campaña en los premios TVyNovelas  </a></div></li>
+      <li><div class="itemDate">3 de febrero de 2014, 15:25 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=gTqdZdS-p-k" target="_blank">  Alejo Canedo te invita a votar por él en los TvyNovelas </a></div></li>
+      <li><div class="itemDate">3 de febrero de 2014, 15:25 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=E_a5Vl2MC2c" target="_blank">  Únete a la beatlemanía! llegaron THE BEATLES a Musitramas.  </a></div></li>
+      <li><div class="itemDate">3 de febrero de 2014, 15:46 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=6FBN6UvF94E" target="_blank">  Mateo Ramírez te invita a votar por el en los TVyNovelas  </a></div></li>
+      <li><div class="itemDate">3 de febrero de 2014, 16:06 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=Zk5d_OPl0ck" target="_blank">  Tato Ojeda quiere que votes por él en los TVyNovelas  </a></div></li>
+      <li><div class="itemDate">3 de febrero de 2014, 16:23 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=WK7Ep7znD4U" target="_blank">  Vota por Camila Wills en los TVyNovelas </a></div></li>
+      <li><div class="itemDate">3 de febrero de 2014, 16:36 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=hXfP42HCqRw" target="_blank">  El Cuaderno quiere ser protagonista en los TVyNovelas </a></div></li>
+      <li><div class="itemDate">3 de febrero de 2014, 16:50 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=K3oJT06XxYM" target="_blank">  El Top de los famosos quiere una estatuilla de los TVyNovelas </a></div></li>
+      <li><div class="itemDate">3 de febrero de 2014, 17:01 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=lqvXRpOaQT8" target="_blank">  Silvana Gómez desea que votes por ella  </a></div></li>
+      <li><div class="itemDate">3 de febrero de 2014, 17:18 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=1zeUEY_n1So" target="_blank">  Isa Katherine desea salir ganadora  </a></div></li>
+      <li><div class="itemDate">3 de febrero de 2014, 17:33 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=kT9T9oOQyW4" target="_blank">  Una historia en bicicleta pedalea por un premio </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 9:54  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=YpEk4xjNdfQ" target="_blank">  El Gran Fan quiere un TVyNovelas  </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 10:06 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=ZwwvAJFcdpg" target="_blank">  Andrés López y TR3CE News quieren ganar en los TVyNovelas </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 10:08 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=FLfm8k9gaKQ" target="_blank">  Y tuit quién eres? CAP1 - parte1  </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 10:26 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=goVSlCbgITE" target="_blank">  Fahionistas sigue de moda y quiere que lo apoyes  </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 10:47 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=DbfsiphBn1o" target="_blank">  Aldea Tic quiere ganar  </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 14:48 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=_n4It4SL6oA" target="_blank">  Y tuit quién eres? CAP1 - parte2  </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 18:34 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=R-2lm0ImpGg" target="_blank">  Y tuit quién eres? CAP3 - parte1  </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 20:25 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=mt7pfrUehZc" target="_blank">  Y tuit quién eres? CAP3 - parte2  </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 21:05 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=7PWPRjAZXRQ" target="_blank">  Y tuit quién eres? CAP3 - parte3  </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 21:32 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=EopaEmFTBw0" target="_blank">  Y tuit quién eres? CAP6 - parte1  </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 22:30 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=3WsiT6YCJNg" target="_blank">  Y tuit quién eres? CAP6 - parte2  </a></div></li>
+      <li><div class="itemDate">4 de febrero de 2014, 23:05 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=WaqRpCZAmSI" target="_blank">  Y tuit quién eres? CAP6 - parte3  </a></div></li>
+      <li><div class="itemDate">5 de febrero de 2014, 0:05  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=zAtF4kcL8rE" target="_blank">  Y tuit quién eres? CAP7 - parte1  </a></div></li>
+      <li><div class="itemDate">5 de febrero de 2014, 1:14  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=SctteYCYYtU" target="_blank">  Y tuit quién eres? CAP7 - parte2  </a></div></li>
+      <li><div class="itemDate">5 de febrero de 2014, 2:20  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=XmkxRFwntGY" target="_blank">  Y tuit quién eres? CAP7 - parte3  </a></div></li>
+      <li><div class="itemDate">6 de febrero de 2014, 11:39 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=oztybQWohKU" target="_blank">  Paz, amor y música con woodstock en Musitramas! </a></div></li>
+      <li><div class="itemDate">12 de febrero de 2014, 12:38  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=0y5abepX1M4" target="_blank">  Conoce a los 'TV Junkies' y su canción 'Revolver' </a></div></li>
+      <li><div class="itemDate">12 de febrero de 2014, 16:47  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=qfXv_PsBhAw" target="_blank">  TopTR3CE con lo mejor de la música para ti  </a></div></li>
+      <li><div class="itemDate">13 de febrero de 2014, 10:28  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=3k8nLFqCi9g" target="_blank">  No te pierdas 'That`s Fresh Colombia' </a></div></li>
+      <li><div class="itemDate">13 de febrero de 2014, 16:23  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=Kn4jfeRmGe4" target="_blank">  Los reyes de la noche llegan al TR3CE </a></div></li>
+      <li><div class="itemDate">14 de febrero de 2014, 16:28  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=awCjGymirOU" target="_blank">  The Hall Effect presenta 'Te espero' en privado con el TR3CE  </a></div></li>
+      <li><div class="itemDate">14 de febrero de 2014, 22:00  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=tSIy3wLZU5s" target="_blank">  Canal TR3CE va por más en los India Catalina  </a></div></li>
+      <li><div class="itemDate">14 de febrero de 2014, 22:04  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=Zl4_669p4c4" target="_blank">  Vota por El Cuaderno MX en los TVyNovelas </a></div></li>
+      <li><div class="itemDate">14 de febrero de 2014, 22:07  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=MZUYGCkhK64" target="_blank">  Vota por Mateo en los TVyNovelas  </a></div></li>
+      <li><div class="itemDate">18 de febrero de 2014, 15:43  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=EhfccJghOjg" target="_blank">  Descubre lo que viene en las tardes del TR3CE…  </a></div></li>
+      <li><div class="itemDate">19 de febrero de 2014, 16:55  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=k6IToDwRUb0" target="_blank">  El Gran Fan Recargado este 2014 </a></div></li>
+      <li><div class="itemDate">20 de febrero de 2014, 17:27  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=IRW9tJ_cdrA" target="_blank">  No te pierdas el Top de los Famosos en 2014 </a></div></li>
+      <li><div class="itemDate">21 de febrero de 2014, 17:05  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=DBZAvNssC98" target="_blank">  El Canal TR3CE celebra sus nominaciones </a></div></li>
+      <li><div class="itemDate">24 de febrero de 2014, 9:11 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=BGudBxuC63Y" target="_blank">  Descubre lo que viene en las tardes en canal TR3CE. </a></div></li>
+      <li><div class="itemDate">24 de febrero de 2014, 15:39  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=WzH8tv6XgQY" target="_blank">  Vive las sorpresas del TR3CE en 2014  </a></div></li>
+      <li><div class="itemDate">24 de febrero de 2014, 21:22  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=d_o2jwSNJ_Y" target="_blank">  Conoce qué es El Crew </a></div></li>
+      <li><div class="itemDate">25 de febrero de 2014, 11:02  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=Now5191YHBk" target="_blank">  That's Fresh  llega al TR3ce con lo mejor de la gastronomía.  </a></div></li>
+      <li><div class="itemDate">26 de febrero de 2014, 14:29  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=6pzgnGzczbk" target="_blank">  Los reyes de la noche han escogido un ganador!  </a></div></li>
+      <li><div class="itemDate">26 de febrero de 2014, 14:46  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=RvWmCykeNNk" target="_blank">  RUTA TR3CE, Lo nuevo en las mañanas de Canal TR3CE. </a></div></li>
+      <li><div class="itemDate">27 de febrero de 2014, 10:28  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=m18DFlKAjKU" target="_blank">  That´s Fresh Colombia te enseña a comer bien Cap. 2.  </a></div></li>
+      <li><div class="itemDate">28 de febrero de 2014, 13:04  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=EeYUZl-UKpM" target="_blank">  EL CREW llega a las noches del TR3CE. </a></div></li>
+      <li><div class="itemDate">28 de febrero de 2014, 16:48  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=ec_pjXceotM" target="_blank">  Tenemos todo listo para EL CREW.  </a></div></li>
+      <li><div class="itemDate">28 de febrero de 2014, 17:48  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=3N72IaKePa0" target="_blank">  La Rola tiene un premio especial para ti!!  </a></div></li>
+      <li><div class="itemDate">28 de febrero de 2014, 19:34  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=6bgwl2pYuMA" target="_blank">  La Rola, gran estreno en Canal TR3CE  </a></div></li>
+      <li><div class="itemDate">3 de marzo de 2014, 15:55 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=9eKtCSI7AJo" target="_blank">  RUTA TR3CE, Lo nuevo en las mañanas de Canal TR3CE  </a></div></li>
+      <li><div class="itemDate">4 de marzo de 2014, 11:04 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=HKsWMgCKF6U" target="_blank">  That´s Fresh Colombia te enseña a comer bien, Capitulo 3. </a></div></li>
+      <li><div class="itemDate">4 de marzo de 2014, 16:29 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=xv216IoE16Q" target="_blank">  Sensualidad y Baile con Sylvana Gómez y Laura Beraza en El Crew </a></div></li>
+      <li><div class="itemDate">4 de marzo de 2014, 16:54 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=UdNUKwCZlTU" target="_blank">  Perfil Adrian Lara "Wachu"</a></div></li>
+      <li><div class="itemDate"> de marzo de 2014, 17:01  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=uBs52ey2qHw" target="_blank">  Cóctel Fresa salvaje con Laura Beracasa en El Crew  </a></div></li>
+      <li><div class="itemDate">4 de marzo de 2014, 17:51 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=U3x_V1rFg4c" target="_blank">  Sonidos MONOPHONICOS en las Musicapsulas  </a></div></li>
+      <li><div class="itemDate">4 de marzo de 2014, 18:21 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=XHDMxkp4cXQ" target="_blank">  #ElGranFan "El Club" Piso 21 Angeles Mortales </a></div></li>
+      <li><div class="itemDate">4 de marzo de 2014, 19:04 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=Buc479DWZMw" target="_blank">  #ElGranFan "Haciendo Historia" Bruce Willis </a></div></li>
+      <li><div class="itemDate">4 de marzo de 2014, 19:11 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=3unQe0HEPFU" target="_blank">  En el TR3CE "Ellos son".  </a></div></li>
+      <li><div class="itemDate">4 de marzo de 2014, 19:20 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=s3PKeoQetVk" target="_blank">  #ElGranFan "El Coleccionista" Renault 4 a Escala  </a></div></li>
+      <li><div class="itemDate">4 de marzo de 2014, 19:44 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=o4CZAjAPb1I" target="_blank">  Las Camisas contrastadas son Fashionistas </a></div></li>
+      <li><div class="itemDate">4 de marzo de 2014, 20:40 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=goC9xoa9utQ" target="_blank">  Ellos son presenta a Cesar López  </a></div></li>
+      <li><div class="itemDate">5 de marzo de 2014, 10:27 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=pVteNnDbnkc" target="_blank">  Ya está listo TR3CE NEWS. </a></div></li>
+      <li><div class="itemDate">5 de marzo de 2014, 12:47 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=Cw4hRN3vaxI" target="_blank">  Alquiler de Bicis en Laika Bikes Tours  </a></div></li>
+      <li><div class="itemDate">5 de marzo de 2014, 13:27 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=GKqSI2bDwXA" target="_blank">  Músicapsulas con Maia y Poison  </a></div></li>
+      <li><div class="itemDate">5 de marzo de 2014, 13:46 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=yza2L4rFGXg" target="_blank">  Cómo cuida Sylvana Gómez su rostro? </a></div></li>
+      <li><div class="itemDate">5 de marzo de 2014, 13:59 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=_B2TH3XoftU" target="_blank">  El Crew del Kartismo  </a></div></li>
+      <li><div class="itemDate">5 de marzo de 2014, 18:42 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=XMRvgzEDGmo" target="_blank">  Ellos son "EL CREW" ganador.  </a></div></li>
+      <li><div class="itemDate">6 de marzo de 2014, 10:12 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=Wxtfo9M6GBc" target="_blank">  That´s Fresh Colombia te enseña a comer bien, Capitulo 4  </a></div></li>
+      <li><div class="itemDate">6 de marzo de 2014, 10:30 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=drkJ_jEqHiQ" target="_blank">  'Ellos Son' hoy con César López </a></div></li>
+      <li><div class="itemDate">6 de marzo de 2014, 11:25 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=rRCEh1skeO8" target="_blank">  Sylvana Gomez conociendo Alma Tango </a></div></li>
+      <li><div class="itemDate">6 de marzo de 2014, 12:07 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=C_-9bNcvEIk" target="_blank">  Pal' Hambre Postre de fresas con Laura Beracasa </a></div></li>
+      <li><div class="itemDate">6 de marzo de 2014, 13:20 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=j4mDm09bHXo" target="_blank">  El plan de los miercoles es el Ciclopaseo </a></div></li>
+      <li><div class="itemDate">7 de marzo de 2014, 9:38  </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=o-ALxiu5hlc" target="_blank">  #ElGranFan "Haicendo Historia" Big Time Rush  </a></div></li>
+      <li><div class="itemDate">7 de marzo de 2014, 10:06 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=8ToufhW_Uik" target="_blank">  #ElGranFan "El Club" Big Time Rush  </a></div></li>
+      <li><div class="itemDate">7 de marzo de 2014, 11:41 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=A03dV2KosME" target="_blank">  Fashion se dice Animal Print en Fashionistas  </a></div></li>
+      <li><div class="itemDate">7 de marzo de 2014, 12:21 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=gxG0qIqo610" target="_blank">  El Rey de la Champeta Mr Black acompañó a los reyes de la noche </a></div></li>
+      <li><div class="itemDate">7 de marzo de 2014, 12:45 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=a6EcFOboA1c" target="_blank">  Poison con Daniattack en las Musicapsulas </a></div></li>
+      <li><div class="itemDate">7 de marzo de 2014, 13:37 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=H8sWedjvGbI" target="_blank">  CREW 11 PORRAS  </a></div></li>
+      <li><div class="itemDate">7 de marzo de 2014, 15:21 </div><div class="itemTitle"><a href="http://www.youtube.com/watch?v=lf9HObpDJBo" target="_blank">  EGF 01 CF CONSULADO </a></div></li>
+    </ul>
+  </section>
+  
+  <div id="ocultar"><img src="img/carga.gif"></div>	
+  </div>
+    <div id="entradaJson" style="display:none"></div>
+      <script>
+          $(function(){  
+                var gesto = document.getElementById("swipe");
+                    Hammer(gesto).on("swipeleft", function() {
+                    window.location="envivo.html";
+                   
+                });
+                
+                Hammer(gesto).on("swiperight", function() {
+                    window.location="programacion.html";
+                });
+                
+
+          });
+
+      </script>
+	</body>
+</html>
