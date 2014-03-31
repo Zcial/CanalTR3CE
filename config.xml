@@ -45,6 +45,7 @@
 	<icon src="icons/ios/icon114x114.png" gap:platform="ios" width="114" height="114" />
 	
 	<gap:splash src="img/splash.png" />
+	<gap:splash src="img/Default-568h@2x.png" />
 	<gap:splash src="img/splash.png" gap:platform="ios" width="320" height="480" />
 
 	<!--Carga del servidor iOS!-->
